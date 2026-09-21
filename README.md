@@ -12,3 +12,7 @@ measurements, alerts and maintenance.
 - Pytest
 - Docker
 - GitHub Actions
+
+## DB Schema
+
+![alt text](image.png)
