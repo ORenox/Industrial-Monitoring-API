@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-          DJANGO_SECRET_KEY: test-secret-key
-          POSTGRES_DB: industrial_monitoring
-          POSTGRES_USER: django
-          POSTGRES_PASSWORD: django_password
-          POSTGREES_HOST: localhost
-          POSGRES_PORT: 5432
+      DJANGO_SECRET_KEY: test-secret-key
+      POSTGRES_DB: industrial_monitoring
+      POSTGRES_USER: django
+      POSTGRES_PASSWORD: django_password
+      POSTGREES_HOST: localhost
+      POSGRES_PORT: 5432
 
     services:
       postgres:
