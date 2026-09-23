@@ -27,7 +27,7 @@ jobs:
           POSTGRES_PASSWORD: django_password
 
         ports:
-          - 5432:5433
+          - 5433:5432
 
         options: >-
           --health-cmd="pg_isready -U django -d industrial_monitoring"
@@ -49,6 +49,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           
+      - name: Check database environment
+        run: |
+          python -c "import os; print('POSTGRES_HOST=', os.getenv('POSTGRES_HOST')); print('POSTGRES_PORT=', os.getenv('POSTGRES_PORT'))"
       
       - name: Run django checks
         run: |
