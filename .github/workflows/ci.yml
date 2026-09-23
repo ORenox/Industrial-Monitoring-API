@@ -15,7 +15,7 @@ jobs:
           POSTGRES_USER: django
           POSTGRES_PASSWORD: django_password
           POSTGREES_HOST: localhost
-          POSGRES_PORT: 5433
+          POSGRES_PORT: 5432
 
     services:
       postgres:
@@ -27,7 +27,7 @@ jobs:
           POSTGRES_PASSWORD: django_password
 
         ports:
-          - 5433:5432
+          - 5432:5432
 
         options: >-
           --health-cmd="pg_isready -U django -d industrial_monitoring"
