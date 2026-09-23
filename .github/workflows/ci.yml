@@ -60,6 +60,10 @@ jobs:
       - name: Run migrations
         run: python manage.py migrate
 
-      - name: Run tests
+      - name: Run tests with coverage
         run: |
-          pytest -v
+          pytest -v --cov=apps --cov-report=term-missing
+      
+      - name: Build Docker image
+        run: docker build -t industrial-monitoring-api .
+      
